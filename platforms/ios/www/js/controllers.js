@@ -1,6 +1,15 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $http) {
+            $http.get('http://128.199.185.100/kawalberas/indikator-vital.json').then(function(resp) {
+                                                                                     console.log('Success', resp);
+                                                                                     $scope.tasks = responses;
+                                                                                     // For JSON responses, resp.data contains the result
+                                                                                     }, function(err) {
+                                                                                     console.error('ERR', err);
+                                                                                     // err.status will contain the status code
+                                                                                     })
+            })
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
