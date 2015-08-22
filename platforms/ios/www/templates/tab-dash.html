@@ -1,18 +1,40 @@
-<ion-view view-title="Indonesia Control Center">
+<ion-view view-title="Dashboard">
   <ion-content class="padding">
-      <ion-list>
-          <ion-item ng-repeat="task in tasks">
+    
+    <ion-list>
+    </ion-list>
+    
+    <div class="list card">
+      <div class="item item-divider">Indikator Vital Rakyat</div>
+      <div class="item item-body">
+          <div>
+          <ion-item ng-repeat="indikator in indikators">
+              <div ng-class="{'bar bar-header bar-assertive':{{indikator.trend==1}}}">
+                  {{indikator.title}}
+              </div>
           </ion-item>
-      </ion-list>
-      
-<!--    <div class="list card">-->
-<!--      <div class="item item-divider">Recent Updates</div>-->
-<!--      <div class="item item-body">-->
-<!--        <div>-->
-<!--          There is a fire in <b>sector 3</b>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
+          </div>
+      </div>
+    </div>
+    
+    <div class="list card">
+      <div class="item item-divider">Indikator Kinerja Kementrian</div>
+      <div class="item item-body">
+        <div>
+          <ion-item>3 - KKP</ion-item>
+        </div>
+        <div>
+          <ion-item>1 - Kemendagri</ion-item>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Agenda Blusukan</div>
+      <div class="item item-body">
+        <div>
+            Temu wicara dengan petani Subang dalam 15 hari lagi
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
