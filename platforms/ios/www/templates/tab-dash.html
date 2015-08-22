@@ -1,15 +1,15 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Indonesia Command Center ™">
   <ion-content class="padding">
     
     <ion-list>
     </ion-list>
     
     <div class="list card">
-      <div class="item item-divider">Indikator Vital Rakyat</div>
+      <div class="item item-divider">Indikator Vital Kesejahteraan Rakyat</div>
       <div class="item item-body">
           <div>
-          <ion-item ng-repeat="indikator in indikators">
-              <div ng-class="{'bar bar-header bar-assertive':{{indikator.trend==1}}}">
+          <ion-item ng-repeat="indikator in indikators" href="#/tab/dash/{{indikator.trend}}">
+              <div ng-class="{'bar bar-header bar-assertive':{{indikator.trend==1}}, 'bar bar-header': {{indikator.trend==2 || indikator.trend==3}}}">
                   {{indikator.title}}
               </div>
           </ion-item>
@@ -21,10 +21,18 @@
       <div class="item item-divider">Indikator Kinerja Kementrian</div>
       <div class="item item-body">
         <div>
-          <ion-item>3 - KKP</ion-item>
+          <ion-item>
+              <div class='bar bar-header bar-balanced'>
+              KKP berhasil menurunkan tingkat illegal fishing sebanyak 80%
+              </div>
+          </ion-item>
         </div>
         <div>
-          <ion-item>1 - Kemendagri</ion-item>
+          <ion-item>
+              <div class='bar bar-header'>
+                  Kementerian perdagangan perlu mendapatkan perhatian khusus
+              </div>
+          </ion-item>
         </div>
       </div>
     </div>

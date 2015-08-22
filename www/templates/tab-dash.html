@@ -1,14 +1,14 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Indonesia Command Center ™">
   <ion-content class="padding">
     
     <ion-list>
     </ion-list>
     
     <div class="list card">
-      <div class="item item-divider">Indikator Vital Rakyat</div>
+      <div class="item item-divider">Indikator Vital Kesejahteraan Rakyat</div>
       <div class="item item-body">
           <div>
-          <ion-item ng-repeat="indikator in indikators">
+          <ion-item ng-repeat="indikator in indikators" href="#/tab/dash/{{indikator.trend}}">
               <div ng-class="{'bar bar-header bar-assertive':{{indikator.trend==1}}, 'bar bar-header': {{indikator.trend==2 || indikator.trend==3}}}">
                   {{indikator.title}}
               </div>

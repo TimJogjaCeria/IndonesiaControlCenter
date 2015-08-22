@@ -10,6 +10,13 @@ angular.module('starter.controllers', [])
                 })
             })
 
+.controller('DashDetailCtrl', function($scope, $http, $stateParams) {
+            $http.get('http://128.199.185.100/kawalberas/indikator-vital-1.json').then(function(responses){
+                $scope.indikators = responses.data;
+            })
+            })
+
+
 .controller('ChatsCtrl', function($scope, Chats) {
             // With the new view caching in Ionic, Controllers are only called
             // when they are recreated or on app start, instead of every page change.
