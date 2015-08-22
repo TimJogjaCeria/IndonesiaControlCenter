@@ -1,17 +1,24 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $http) {
-            console.log('Success!');
-            console.log('OOkay!');
+.controller('DashCtrl', function($scope, $http, $ionicLoading) {
+//            $scope.show = function() {
+//            $ionicLoading.show({
+//                               template: 'Loading...'
+//                               });
+//            };
+//            $scope.hide = function(){
+//            $ionicLoading.hide();
+//            };
+            
             $http.get('http://128.199.185.100/kawalberas/indikator-vital.json').then(function(responses){
                   $scope.indikators = responses.data;
-                                                                                     console.log(responses);
-                                                                                     
                 })
             })
 
 .controller('DashDetailCtrl', function($scope, $http, $stateParams) {
             $http.get('http://128.199.185.100/kawalberas/indikator-vital-1.json').then(function(responses){
+                $scope.kementrian = 'Kementrian Perdagangan'; //ambil dari id URL
+                $scope.title = 'Beras Naik 20%'; //ambil dari id URL
                 $scope.indikators = responses.data;
             })
             })

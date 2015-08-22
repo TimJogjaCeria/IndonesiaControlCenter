@@ -5,10 +5,10 @@
  The Friends service returns an array of friend data
  -->
 
-<ion-view view-title="Kementerian Perdagangan">
+<ion-view view-title="{{kementrian}}">
     <ion-content class="padding">
 <div class="list card">
-    <div class="item item-divider">Detail Penyebab Trend Indikator</div>
+    <div class="item item-divider">{{kementrian}} : {{title}}</div>
     <div class="item item-body">
         <div>
             <ion-item ng-repeat="indikator in indikators">
@@ -22,13 +22,3 @@
 
 </ion-content>
     </ion-view>
-
-
-<!--<ion-view view-title="{{indikator.name}}">-->
-<!--    <ion-content class="padding">-->
-<!--        <img ng-src="" style="width: 64px; height: 64px">-->
-<!--            <p>-->
-<!--            {{indikator.detail}}-->
-<!--            </p>-->
-<!--            </ion-content>-->
-<!--</ion-view>-->
