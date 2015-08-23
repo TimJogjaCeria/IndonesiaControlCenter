@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
 //            $ionicLoading.hide();
 //            };
             
-            $http.get('http://128.199.185.100/kawalberas/indikator-vital.json').then(function(responses){
+            $http.get('http://jogjaceria.aijogja.com/ioapi/summary/indikatorvital_komoditas/1').then(function(responses){
                   $scope.indikators = responses.data;
                                                                                      
                    $scope.doRefresh = function() {
